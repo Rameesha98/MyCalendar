@@ -1,0 +1,334 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 200px;
+    margin: 0;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 40px;
+    flex-direction: column;
+    min-height: 87vh;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    border-radius: 0 0 10px 10px;
+    width: 62%;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    gap: 20px;
+}
+
+.calendar {
+    width: 400px;
+    height: 480px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.special-dates-list {
+    width: 400px;
+    height: 460px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+}
+
+.calendar-header .month-year {
+    font-weight: bold;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.calendar-header.year-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #f0f0f0;
+    padding: 10px 0;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr); 
+    padding: 10px;
+    gap: 5px;
+    text-align: center;
+    min-height: 300px;
+}
+
+.calendar-dates div {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative; 
+}
+
+.calendar-dates div:hover {
+    background-color: #c0c0c0;
+    transform: scale(1.1);
+    color: #031358;
+    font: weight 400px;
+    font-size:small;
+}
+
+.calendar-dates div .tooltip { 
+    visibility: hidden; 
+    background-color: black; 
+    color: #fff; 
+    text-align: center; 
+    border-radius: 5px; 
+    padding: 5px; 
+    position: absolute; 
+    z-index: 1; 
+    bottom: 125%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.calendar-dates div:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.calendar-dates .saturday {
+    color: blue;
+}
+
+.calendar-dates .sunday {
+    color: red;
+}
+
+.calendar-dates .poya {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-dates .today {
+    background-color: rgb(29, 100, 253);
+    color: white;
+    font-weight: bold;
+}
+
+.today {
+    background-color: rgb(255, 255, 255); 
+    color: rgb(5, 67, 199); 
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.special-date {
+    background-color: green; 
+    color: red; 
+}
+
+.mahasivarathri {
+    background-color: #ec390d; 
+    color: #000; 
+}
+
+.poya-day {
+    background-color: green;
+    color: rgb(255, 255, 255);
+}
+
+.special-dates-list h2 {
+    margin-top: 0;
+}
+
+.special-dates-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.special-dates-list li {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.special-date-1 {
+    background-color: #db6868;
+    color: #000000; 
+}
+
+.special-date-2 {
+    background-color: #04ac87; 
+    color: #ffffff; 
+}
+
+.special-date-3 {
+    background-color: green; 
+    color: white; 
+}
+
+.special-date-4 {
+    background-color: #ff5722; 
+    color: #ffffff; 
+}
+
+.special-date-5 {
+    background-color: green; 
+    color: #ffffff; 
+}
+
+.special-date-6 {
+    background-color: #3f51b5; 
+    color: #ffffff; 
+}
+
+.special-date-7 {
+    background-color: #00bcd4;
+    color: #ffffff; 
+}
+
+.special-date-8 {
+    background-color: #6e0dbe; 
+    color: #ffffff;
+}
+
+.special-date-9 {
+    background-color: #cddc39;
+    color: #000000;
+}
+
+.special-date-10 {
+    background-color: #ff9800; 
+    color: #ffffff;
+}
+
+.special-date-11 {
+    background-color: #795548;
+    color: #ffffff; 
+}
+
+.special-date-12 {
+    background-color: green; 
+    color: white; 
+}
+
+.special-date-13 {
+    background-color: green; 
+    color: white; 
+}
+
+.special-date-14 {
+    background-color: #673ab7; 
+    color: #ffffff; 
+}
+
+.special-date-15 {
+    background-color: yellow; 
+    color: #000000; 
+}
+
+.special-date-16 {
+    background-color: #f890e7; 
+    color: #ffffff; 
+}
+
+.special-date-17 {
+    background-color: #665d09; 
+    color: #000000; 
+}
+
+.special-date-18 {
+    background-color: green;
+    color: white; 
+}
+
+.special-date-19 {
+    background-color: #9c27b0;
+    color: #ffffff; 
+}
+
+.special-date-20 {
+    background-color: green;
+    color: white;
+}
+
+.special-date-21 {
+    background-color: green;
+    color: white; 
+}
+
+.special-date-22 {
+    background-color: #213508;
+    color: #ffffff;
+}
+
+.special-date-23 {
+    background-color: green; 
+    color: white; 
+}
+
+.special-date-24 {
+    background-color: green;
+    color: white;
+}
+
+.special-date-25 {
+    background-color: #795548;
+    color: #ffffff;
+}
+
+.special-date-26 {
+    background-color: #f80404; 
+    color: #ffffff; 
+}
+

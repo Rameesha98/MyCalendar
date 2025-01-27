@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Calendar</title>
+</head>
+<body>  
+    <div class="main-content">
+        <div class="calendar">
+            <div class="calendar-header">
+                <button onclick="changeMonth(-1)">&#9664;</button>
+                <span class="month-year" id="monthYear"></span>
+                <button onclick="changeMonth(1)">&#9654;</button>
+            </div>
+            <div class="calendar-header year-controls">
+                <button onclick="changeYear(-1)">&#9664; Year</button>
+                <button onclick="changeYear(1)">Year &#9654;</button>
+            </div>
+            <div class="calendar-days">
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+                <div>Sun</div>
+            </div>
+            <div class="calendar-dates" id="calendarDates"></div>
+        </div>
+        <div class="special-dates-list">
+            <div>
+                <h2>Special Dates 2025</h2>
+                <h3>Today Date is <span id="todayDate" class="today"></span></h3>
+            </div>
+            <ul>
+                <li class="special-date-1">2025-02-26: Mahasivarathri Day</li>
+                <li class="special-date-2">2025-03-01: Ramadan Start</li>
+                <li class="special-date-3">2025-03-13: Madin Full Moon Poya Day</li>
+                <li class="special-date-4">2025-03-31: Eid al-Fitr</li>
+                <li class="special-date-5">2025-04-12: Bak Full Moon Poya Day</li>
+                <li class="special-date-6">2025-04-13: Sinhala and Tamil New Year's Eve</li>
+                <li class="special-date-7">2025-04-14: Sinhala and Tamil New Year's Day</li>
+                <li class="special-date-8">2025-04-18: Good Friday</li>
+                <li class="special-date-9">2025-04-20: Easter Sunday</li>
+                <li class="special-date-10">2025-05-01: May Day</li>
+                <li class="special-date-11">2025-05-11: Mother's Day</li>
+                <li class="special-date-12">2025-05-12: Vesak Full Moon Poya Day</li>
+                <li class="special-date-13">2025-05-13: Day after Vesak Full Moon Poya Day</li>
+                <li class="special-date-14">2025-06-07: Eid al-Adha</li>
+                <li class="special-date-15">2025-06-10: Poson Full Moon Poya Day</li>
+                <li class="special-date-16">2025-06-15: Father's Day</li>
+                <li class="special-date-17">2025-07-07: Eid al-Adha</li>
+                <li class="special-date-18">2025-08-08: Nikini Full Moon Poya Day</li>
+                <li class="special-date-19">2025-09-05: Milad-Un-Nabi (Holy Prophet's Birthday)</li>
+                <li class="special-date-20">2025-09-07: Binara Full Moon Poya Day</li>
+                <li class="special-date-21">2025-10-06: Vap Full Moon Poya Day</li>
+                <li class="special-date-22">2025-10-20: Deepavali</li>
+                <li class="special-date-23">2025-11-05: Il Full Moon Poya Day</li>
+                <li class="special-date-24">2025-12-04: Unduvap Full Moon Poya Day</li>
+                <li class="special-date-25">2025-12-24: Christmas Eve</li>
+                <li class="special-date-26">2025-12-25: Christmas Day</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        NET/23/B2/24 - D.M.R.V Jayawardhana<br>
+        net23b224@uovt.ac.lk
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('todayDate').textContent = `${new Date().getDate()}`;
+    </script>
+</body>
+</html>
